@@ -45,3 +45,13 @@ bin:
 		--workdir="/go/src/${PROJECT}" \
 		--volume="${CURRENT_DIR}:/go/src/${PROJECT}" \
 		"golang:${GOVERSION}" /bin/sh -c "scripts/compile.sh"
+
+# test runs the test suite
+test:
+	@echo "==> Testing ${PROJECT}..."
+	@go test -timeout=60s -parallel=10 ${GOFILES} ${TESTARGS}
+
+# test-race runs the race checker
+test-race:
+	@echo "==> Testing ${PROJECT} (race)..."
+	@go test -timeout=60s -race ${GOFILES} ${TESTARGS}
