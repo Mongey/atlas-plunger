@@ -2,6 +2,7 @@
 ### Unclog your AMI deployment pipeline ™
 #### Artifact promotion for your [Atlas](https://atlas.hashicorp.com) artifacts
 ![http://i.imgur.com/YOU57nK.jpg](http://i.imgur.com/YOU57nK.jpg)
+[![Build Status](https://travis-ci.org/Mongey/atlas-plunger.svg?branch=master)](https://travis-ci.org/Mongey/atlas-plunger)
 
 ### Motivation
 It can be difficult to track what versions of AMIS are being put into different
