@@ -1,0 +1,31 @@
+{
+	"comment": "",
+	"ignore": "",
+	"package": [
+		{
+			"checksumSHA1": "fvtkdevLpbO5rWhN/6N8f/4Li3g=",
+			"path": "github.com/codegangsta/cli",
+			"revision": "c31a7975863e7810c92e2e288a9ab074f9a88f29",
+			"revisionTime": "2015-12-21T18:40:36Z"
+		},
+		{
+			"checksumSHA1": "kh1td7di32tA8dCU7h0JKQNu4BQ=",
+			"path": "github.com/hashicorp/atlas-go/v1",
+			"revision": "b66e377f52e316206efe71abba20e276d8790d86",
+			"revisionTime": "2015-12-16T07:06:19Z"
+		},
+		{
+			"checksumSHA1": "Q2FL/009CFDKCIiHqU7TzTOdu8s=",
+			"path": "github.com/hashicorp/go-cleanhttp",
+			"revision": "ce617e79981a8fff618bb643d155133a8f38db96",
+			"revisionTime": "2015-12-17T20:04:12Z"
+		},
+		{
+			"checksumSHA1": "H9S5xwBvrCqJqte/RGxwl68MWJg=",
+			"path": "github.com/imdario/mergo",
+			"revision": "50d4dbd4eb0e84778abe37cefef140271d96fade",
+			"revisionTime": "2016-05-17T06:44:35Z"
+		}
+	],
+	"rootPath": "github.com/mongey/atlas-plunger"
+}
