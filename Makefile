@@ -46,6 +46,25 @@ bin:
 		--volume="${CURRENT_DIR}:/go/src/${PROJECT}" \
 		"golang:${GOVERSION}" /bin/sh -c "scripts/compile.sh"
 
+# deps gets all the dependencies for this repository and vendors them.
+deps:
+	@echo "==> Updating dependencies..."
+	@echo "--> Installing dependency manager..."
+	@go get -u github.com/kardianos/govendor
+	@govendor init
+	@echo "--> Installing all dependencies..."
+	@govendor fetch -v +outside
+
+# dev builds the project for the current system as defined by go env.
+dev:
+	@env \
+		XC_OS="${ME_OS}" \
+		XC_ARCH="${ME_ARCH}" \
+		$(MAKE) -f "${MKFILE_PATH}" bin
+	@echo "--> Moving into PATH"
+	@cp "${CURRENT_DIR}/pkg/${ME_OS}_${ME_ARCH}/${NAME}" "${CURRENT_DIR}/bin/"
+	@cp "${CURRENT_DIR}/pkg/${ME_OS}_${ME_ARCH}/${NAME}" "${GOPATH}/bin/"
+
 # test runs the test suite
 test:
 	@echo "==> Testing ${PROJECT}..."
