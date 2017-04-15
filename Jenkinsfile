@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build something') {
       steps {
-        input(message: 'Do you want to build?', id: 'foo', ok: 'bar')
+        input(message: 'Do you want to build?', id: 'foo', ok: 'Deploy to UAT', submitter: 'what\'s this', submitterParameter: 'smsms')
       }
     }
     stage('moo') {
